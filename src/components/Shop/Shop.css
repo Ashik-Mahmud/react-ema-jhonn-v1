@@ -1,0 +1,63 @@
+#shop {
+  padding: 1rem;
+  position: relative;
+}
+#shop h1 {
+  margin: 1rem 0rem;
+  text-transform: capitalize;
+}
+#shop .shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  position: relative;
+  grid-gap: 1rem;
+}
+.parent-grid {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  position: relative;
+  grid-gap: 1rem;
+  align-items: flex-start;
+}
+#sidebar {
+  background-color: #eceff0;
+  position: sticky;
+  padding: 2rem;
+  top: 1%;
+}
+#sidebar #summery {
+  margin: 1rem 0rem;
+  position: relative;
+}
+#summery table {
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+#summery th,
+#summery td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #ddd;
+}
+#summery .carts-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.carts-btn button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  font-family: poppins;
+  border-radius: 4px;
+}
+.carts-btn button:last-child {
+  background: #f05454;
+}

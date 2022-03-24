@@ -1,0 +1,35 @@
+/* header  */
+#header {
+  position: relative;
+  /* background-color: #1c2b35; */
+  background-color: var(--primary-color);
+  padding: 1rem 0rem;
+}
+#header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.navbar menu ul {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  list-style: none;
+}
+.navbar ul a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.navbar #cart .badge {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  text-align: center;
+  background-color: #fff;
+  color: #1c2b35;
+  border-radius: 50%;
+}
