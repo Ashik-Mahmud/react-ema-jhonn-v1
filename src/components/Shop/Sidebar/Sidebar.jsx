@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { itemStorage } from "../../Home/Storage";
 
 const Sidebar = ({ countCarts, items, products, setItems, setCountCarts }) => {
+  const [cartData, setCartData] = useState([]);
   let totalPrice = 0;
   let shipping = 0;
 
+  useEffect(() => {
+    fetch(`https://ema-jhon-api.herokuapp.com/products`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(Object.keys(items)),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCartData(data);
+      });
+  }, [items]);
+
   for (let id in items) {
-    const filteredItems = products.filter((product) => product.id === id);
-    totalPrice = totalPrice + filteredItems[0].price * items[id];
-    shipping = shipping + filteredItems[0].shipping;
+    const filteredItems = cartData.filter((product) => product._id === id);
+    totalPrice = totalPrice + filteredItems[0]?.price * items[id];
+    shipping = shipping + filteredItems[0]?.shipping;
   }
   const tax = (totalPrice * 5) / 100;
   const grandTotal = totalPrice + shipping + tax;

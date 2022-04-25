@@ -61,3 +61,26 @@
 .carts-btn button:last-child {
   background: #f05454;
 }
+.pagination {
+  margin: 2rem 0rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.pagination button,
+.pagination select {
+  width: 50px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  font-family: poppins;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.pagination button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+}

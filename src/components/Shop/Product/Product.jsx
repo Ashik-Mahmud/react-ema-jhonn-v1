@@ -3,7 +3,7 @@ import { itemStorage } from "../../Home/Storage";
 import { handleStorageItem } from "../Handle/HandleCarts";
 import "./Product.css";
 const Product = ({ product, setCountCarts, setItems }) => {
-  const { id, category, name, seller, price, img, ratings } = product;
+  const { _id: id, category, name, seller, price, img, ratings } = product;
 
   const length = () => {
     let length = 0;

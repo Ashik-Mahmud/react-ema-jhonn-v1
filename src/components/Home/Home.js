@@ -8,7 +8,7 @@ const Home = () => {
     const [countCarts, setCountCarts] = useState(0)
 
     useEffect(()=>{
-        fetch('./products.json')
+        fetch('https://ema-jhon-api.herokuapp.com/products')
         .then(response => response.json())
         .then(data => setProducts(data));
         
